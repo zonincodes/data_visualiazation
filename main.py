@@ -87,11 +87,16 @@ def random_walk():
     """Plot agraph of random walks"""
 
     # make a random walk, and plot the points
-    rw = RandomWalk()
-    rw.fill_walk()
+    while True:
+        rw = RandomWalk()
+        rw.fill_walk()
 
-    plt.scatter(rw.x_values, rw.y_values, s=15)
-    plt.show()
+        plt.scatter(rw.x_values, rw.y_values, s=15)
+        plt.show()\
+
+        keep_running = input("Make another walk? (Y/N): ")
+        if keep_running.lower() == 'n':
+            break
 
 
 if __name__ == "__main__":
