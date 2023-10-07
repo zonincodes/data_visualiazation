@@ -88,11 +88,14 @@ def random_walk():
 
     # make a random walk, and plot the points
     while True:
-        rw = RandomWalk()
+        rw = RandomWalk(50_000)
         rw.fill_walk()
+        plt.style.use('classic')
+
+        # plot the points to do the walk
         fig, ax = plt.subplots()
-        point_numbers = tuple(range(rw.num_points))
-        ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, s=15)
+        point_numbers = range(rw.num_points)
+        ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=1)
         ax.set_aspect('equal')
 
         # Emphasize the first and the last points
