@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from src.random_walks import RandomWalk
 
 
 def plot_squares():
@@ -82,7 +83,19 @@ def calculate_data_automatically():
     plt.show()
 
 
+def random_walk():
+    """Plot agraph of random walks"""
+
+    # make a random walk, and plot the points
+    rw = RandomWalk()
+    rw.fill_walk()
+
+    plt.scatter(rw.x_values, rw.y_values, s=15)
+    plt.show()
+
+
 if __name__ == "__main__":
     # draw_scatter()
     # draw_multiple_scatter()
-    calculate_data_automatically()
+    # calculate_data_automatically()
+    random_walk()
