@@ -59,6 +59,26 @@ def draw_multiple_scatter():
     # Draw the plot
     plt.show()
 
+
+def calculate_data_automatically():
+
+    x_values = list(range(1, 1001))
+    y_values = [x ** 2 for x in x_values]
+
+    plt.scatter(x_values, y_values, s=1)
+
+    # set the cahrt and lebel axis
+    plt.title("Square numbers", fontsize=24)
+    plt.xlabel("Value", fontsize=16)
+    plt.ylabel("Square of Value", fontsize=16)
+
+    # set the size of the tick label
+    plt.tick_params(axis='both', which='major', labelsize=14)
+
+    # draw the plot
+    plt.show()
+
 if __name__ == "__main__":
     # draw_scatter()
-    draw_multiple_scatter()
+    # draw_multiple_scatter()
+    calculate_data_automatically()
