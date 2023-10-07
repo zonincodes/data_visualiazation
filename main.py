@@ -64,7 +64,8 @@ def calculate_data_automatically():
     y_values = [x ** 2 for x in x_values]
 
     # scatter points and remove outlines
-    plt.scatter(x_values, y_values, c="red", edgecolors='none', s=10)
+    plt.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues,
+                edgecolors='none', s=10)
 
     # set the chart and label axis
     plt.title("Square numbers", fontsize=24)
